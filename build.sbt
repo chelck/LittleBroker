@@ -2,7 +2,7 @@ import com.typesafe.sbt.SbtNativePackager.packageArchetype
 
 name := """LittleBroker"""
 
-version := "1.0"
+version := "1.3.0"
 
 scalaVersion := "2.11.5"
 
@@ -18,6 +18,6 @@ packageDescription in Debian := "Little Broker"
 
 maintainer in Debian := "Christopher Helck"
 
-bashScriptConfigLocation := Some("${app_home}/../conf/jvmopts")
+//bashScriptConfigLocation := Some("${app_home}/../conf/jvmopts")
 
-bashScriptExtraDefines += """addJava "-Dconfig.file=${app_home}/../conf/myenv.cfg""""
+bashScriptExtraDefines += """addJava "-Dmyenv.cfg=${HOME}/.myenv.cfg""""
